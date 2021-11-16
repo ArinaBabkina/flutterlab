@@ -1,4 +1,3 @@
-//import 'dart:html';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -64,12 +63,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   controller: pageController,
                   itemCount: images.length,
                   itemBuilder: (BuildContext context, int position) {
-                    return Slider(position);
+                    return buildSliderCard(position);
                   }))
         ])));
   }
 
-  Slider(int index) {
+  buildSliderCard(int index) {
     return Container(
         child: Center(
             child: Text(names[index],
